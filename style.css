@@ -1,0 +1,326 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} /* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+} /* Grid */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 25px;
+  text-align: center;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  margin-bottom: 15px;
+}
+#gameBoard,
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+#gameBoard {
+  width: 600px;
+  height: 600px;
+  border-radius: 2%;
+  margin: 0 auto;
+  border: 2px groove #000;
+  box-sizing: content-box;
+  background: #f886a2;
+}
+.gameOverGrid {
+  margin: auto;
+} /* Game */
+.pixel {
+  width: 15px;
+  height: 15px;
+  box-sizing: border-box;
+}
+.snakePixel {
+  background-color: rgb(92, 64, 12);
+  border-radius: 50%;
+}
+.foodPixel {
+  background-color: rgb(26, 215, 45);
+  border-radius: 60%;
+}
+#gameOver {
+  color: #f2e63e;
+  display: none;
+  letter-spacing: 3px;
+}
+.pixel:last-child {
+  border-right: none;
+}
+.row:last-child .pixel {
+  border-bottom: none;
+} /* Style */
+.btn {
+  background: #f895a9;
+  background-image: -webkit-linear-gradient(top, pink, pink);
+  background-image: -moz-linear-gradient(top pink, pink);
+  background-image: -ms-linear-gradient(top, pink, pink);
+  background-image: -o-linear-gradient(top, pink, pink);
+  background-image: linear-gradient(to bottom, pink, pink);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f1f1f;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  border: 0;
+}
+.btn:hover {
+  background: #3f3f3e;
+  background-image: -webkit-linear-gradient(top, pink, pink);
+  background-image: -moz-linear-gradient(top, pink, pink);
+  background-image: -ms-linear-gradient(top, pink, pink);
+  background-image: -o-linear-gradient(top, pink, pink);
+  background-image: linear-gradient(to bottom, pink, pink);
+  text-decoration: none;
+} /* Typog */ /*! Typebase.less v0.1.0 | MIT License */ /* Setup */
+html {
+  /* Change default typefaces here */
+  font-family: poppins;
+  font-size: 137.5%;
+  -webkit-font-smoothing: antialiased;
+} /* Copy & Lists */
+p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+ul li,
+ol li {
+  line-height: 1.5rem;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+} /* Headings */
+h2 {
+  padding: 30px 0 8px;
+  position: relative;
+  letter-spacing: 3px;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 9px;
+  width: 150px;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: rgb(175, 49, 0);
+  z-index: -1;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Change heading typefaces here */
+  font-family: sans-serif;
+  font-weight: 900;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  letter-spacing: 10px;
+}
+h1 {
+  font-size: 4.242rem;
+  line-height: 4.5rem;
+  margin-top: 3rem;
+}
+h2 {
+  font-size: 2.828rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+}
+h3 {
+  font-size: 1.414rem;
+}
+h4 {
+  font-size: 0.707rem;
+}
+h5 {
+  font-size: 0.4713333333333333rem;
+}
+h6 {
+  font-size: 0.3535rem;
+} /* Tables */
+table {
+  margin-top: 1rem;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  padding: 0;
+  line-height: 33px;
+} /* Code blocks */
+code {
+  vertical-align: bottom;
+} /* Leading paragraph text */
+.lead {
+  font-size: 1.414rem;
+} /* Hug the block above you */
+.hug {
+  margin-top: 0;
+}
